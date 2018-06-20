@@ -16,7 +16,7 @@ p = 0.5;
 tic;
 
 [m1, m2] = size(M);
-[r, c] = find(I);
+[r, c] = ind2sub([m1, m2], I);
 D_t = M(r + (m1 * (c - 1)));
 
 n = sqrt(m1 * m2);
